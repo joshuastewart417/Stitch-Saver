@@ -10,13 +10,13 @@ import {Redirect} from "react-router"
 export const ApplicationViews = ({setAuthUser, isAuthenticated}) => {
   return (
     <>
-      <Route exact path="/stitchform">
-        {isAuthenticated ? <StitchForm /> : <Redirect to="/login" />}
+
+      <Route exact path="/">
+        <Login setAuthUser={setAuthUser} />
       </Route>
 
-       {/* Authentication */}
-      <Route path="/login">
-        <Login setAuthUser={setAuthUser} />
+      <Route exact path="/stitchform">
+        {isAuthenticated ? <StitchForm /> : <Redirect to="/" />}
       </Route>
 
       <Route path="/register" >
