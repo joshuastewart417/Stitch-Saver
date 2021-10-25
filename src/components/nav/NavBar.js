@@ -3,26 +3,33 @@ import { Link } from "react-router-dom";
 import { useHistory } from "react-router";
 import "../nav/NavBar.css"
 
-export const NavBar = (props) => {
+export const NavBar = ({clearUser, isAuthenticated}) => {
   const history = useHistory();
 
+  const handleLogout = () => {
+      clearUser();
+      history.push("/")
+  }
+
+
+
   return (
-    <nav className="navbar">
-      <ul className="navlink_container">
-        <li className="nav-item">
-          <Link className="navlink" to="/stitchform">
-            Home
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link className="navlink" to="/stitchlist">
-            My Stitch List
-          </Link>
-        </li>
-        </ul>
-      <button onClick={ () => {sessionStorage.clear(); history.push(`/login`)}}>Log out</button>
+      <ul className="navbar">
+          {isAuthenticated ?
+          <li className="navlink_container">
+              <Link className="navlink" to="/stitchform"> Home </Link>
+          </li> ||
+               <li className="navlink_container">
+                  <Link className="navlink" to="/stitchlist"> My StitchList </Link>
+              </li>
+              : null}
+          {isAuthenticated
+              ? <li className="navlink_container">
+                  <span className="navlink" onClick={handleLogout}> Logout </span>
+              </li>
+              : null}
     
-    </nav>
+    </ul>
   );
 
 };

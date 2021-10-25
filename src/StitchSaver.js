@@ -2,7 +2,7 @@
 import React, {useState} from "react"
 import { NavBar } from "../src/components/nav/NavBar"
 import { ApplicationViews } from "../src/components/ApplicationViews"
-import "./StitchSaver.css"
+
 
 export const StitchSaver = () => {
     const [isAuthenticated, setIsAuthenticated] = useState(sessionStorage.getItem("stitch_user") !== null)

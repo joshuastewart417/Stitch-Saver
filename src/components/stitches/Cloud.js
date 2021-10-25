@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Axios from "axios";
-import ColorThief from 'colorthief'
-import "./StitchForm.css";
+import ColorThief from '../node_modules/colorthief/dist/color-thief'
+import "../src/Stitchform.css";
 
-export const StitchForm = () => {
+export const Cloud = () => {
   const [imageSelected, setImageSelected] = useState("");
   const [displayImg, setDisplayImg] = useState("");
   const [rgbValues, setRGBValues] = useState([])
@@ -24,7 +24,6 @@ export const StitchForm = () => {
     return (
       <>
       <button className="palette_btn" onClick={() => {
-        handleImageLoaded()
       }}>Create Color Palette</button>
       <button className="thread_btn">Create Thread List</button>
       </>
@@ -59,7 +58,9 @@ export const StitchForm = () => {
         <input type="file" onChange={(e) => {setImageSelected(e.target.files[0]);}}/>
         <button onClick={uploadImage}>Upload Image</button>
       </div>
-      <img className="preview" src={displayImg} crossOrigin="anonymous"/>
+      <img className="preview" src={displayImg} crossOrigin="anonymous" onLoad={() => {
+        handleImageLoaded()
+      }}/>
       <div className="palette">
         <div className="swatch">
 
