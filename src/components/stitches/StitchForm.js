@@ -1,12 +1,17 @@
 import React, { useEffect, useState } from "react";
 import Axios from "axios";
 import ColorThief from 'colorthief'
+import {getAllThreads} from "../threads/ThreadManager"
+import { ThreadMatcher } from "../threads/ThreadMatcher";
 import "./StitchForm.css";
 
 export const StitchForm = () => {
   const [imageSelected, setImageSelected] = useState("");
   const [displayImg, setDisplayImg] = useState("");
   const [rgbValues, setRGBValues] = useState([])
+  const [dmcValues, setDMCValues] = useState([])
+  const [threadsRetrieval, setThreadsRetrieval] = useState(false)
+
 
   
   const uploadImage = () => {
@@ -20,22 +25,36 @@ export const StitchForm = () => {
     ).then((res) => setDisplayImg(res.data.url));
     }
 
-  const generateButtons = () => {
+  const generatePaletteButton = () => {
     return (
       <>
       <button className="palette_btn" onClick={() => {
-        handleImageLoaded()
-      }}>Create Color Palette</button>
-      <button className="thread_btn">Create Thread List</button>
+        retrievePalette();
+      }}>Create Color Palette</button> 
       </>
     )
   }
 
-  const handleImageLoaded = () => {
+  const generateThreadButton = () => {
+   return (
+     <button className="thread_btn" onClick={() => {
+       if(rgbValues !== undefined && dmcValues !== undefined) {
+         retrieveThreadList()
+      }}}>Create Thread List</button>
+   )
+ }
+
+ 
+
+  const retrievePalette = () => {
     const colorThief = new ColorThief()
     const img = document.querySelector('.preview')
     const colors = colorThief.getPalette(img, 10)
     setRGBValues(colors)
+  }
+
+  const retrieveThreadList = () => {
+    setThreadsRetrieval(true)
   }
 
   useEffect(() => {
@@ -48,24 +67,32 @@ export const StitchForm = () => {
     swatch.style.setProperty('--color', color);
     swatch.setAttribute('color', color)
     palette.appendChild(swatch)
-    console.log(swatch)
     return palette;
             }, palette)}, [rgbValues]);
 
+
+  useEffect(() => {
+    getAllThreads().then(threads => setDMCValues(threads))
+   }, [])
 
   return (
     <div className="upload_container">
       <div className="form_wrapper">
         <input type="file" onChange={(e) => {setImageSelected(e.target.files[0]);}}/>
         <button onClick={uploadImage}>Upload Image</button>
-      </div>
       <img className="preview" src={displayImg} crossOrigin="anonymous"/>
-      <div className="palette">
-        <div className="swatch">
-
-        </div>
+      {displayImg ? generatePaletteButton() : null}
+      {(rgbValues.length === 10) ? generateThreadButton() : null}
       </div>
-      {displayImg ? generateButtons() : null}
+      <div className="list_container">
+          <div className="palette">
+            <div className="swatch">
+            </div>
+          </div>
+          <div className="threadList">
+            {threadsRetrieval ? <ThreadMatcher rgbValues={rgbValues} dmcValues={dmcValues} /> : null}
+          </div>
+      </div>    
     </div>
   );
 };
