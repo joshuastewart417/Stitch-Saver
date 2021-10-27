@@ -10,6 +10,7 @@ export const StitchForm = () => {
   const [displayImg, setDisplayImg] = useState("");
   const [rgbValues, setRGBValues] = useState([])
   const [dmcValues, setDMCValues] = useState([])
+  const [threadsRetrieval, setThreadsRetrieval] = useState(false)
 
 
   
@@ -38,15 +39,22 @@ export const StitchForm = () => {
    return (
      <button className="thread_btn" onClick={() => {
        if(rgbValues !== undefined && dmcValues !== undefined) {
-        ThreadMatcher({rgbValues}, {dmcValues})}
-      }}>Create Thread List</button>
+         retrieveThreadList()
+      }}}>Create Thread List</button>
    )
  }
+
+ 
+
   const retrievePalette = () => {
     const colorThief = new ColorThief()
     const img = document.querySelector('.preview')
     const colors = colorThief.getPalette(img, 10)
     setRGBValues(colors)
+  }
+
+  const retrieveThreadList = () => {
+    setThreadsRetrieval(true)
   }
 
   useEffect(() => {
@@ -72,15 +80,19 @@ export const StitchForm = () => {
       <div className="form_wrapper">
         <input type="file" onChange={(e) => {setImageSelected(e.target.files[0]);}}/>
         <button onClick={uploadImage}>Upload Image</button>
-      </div>
       <img className="preview" src={displayImg} crossOrigin="anonymous"/>
-      <div className="palette">
-        <div className="swatch">
-
-        </div>
-      </div>
       {displayImg ? generatePaletteButton() : null}
       {(rgbValues.length === 10) ? generateThreadButton() : null}
+      </div>
+      <div className="list_container">
+          <div className="palette">
+            <div className="swatch">
+            </div>
+          </div>
+          <div className="threadList">
+            {threadsRetrieval ? <ThreadMatcher rgbValues={rgbValues} dmcValues={dmcValues} /> : null}
+          </div>
+      </div>    
     </div>
   );
 };
