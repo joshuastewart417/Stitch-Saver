@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from "react";
 import Axios from "axios";
 import ColorThief from 'colorthief'
+import {getAllThreads} from "../threads/ThreadManager"
+import { ThreadMatcher } from "../threads/ThreadMatcher";
 import "./StitchForm.css";
 
 export const StitchForm = () => {
   const [imageSelected, setImageSelected] = useState("");
   const [displayImg, setDisplayImg] = useState("");
   const [rgbValues, setRGBValues] = useState([])
+  const [dmcValues, setDMCValues] = useState([])
+
 
   
   const uploadImage = () => {
@@ -20,18 +24,25 @@ export const StitchForm = () => {
     ).then((res) => setDisplayImg(res.data.url));
     }
 
-  const generateButtons = () => {
+  const generatePaletteButton = () => {
     return (
       <>
       <button className="palette_btn" onClick={() => {
-        handleImageLoaded()
-      }}>Create Color Palette</button>
-      <button className="thread_btn">Create Thread List</button>
+        retrievePalette();
+      }}>Create Color Palette</button> 
       </>
     )
   }
 
-  const handleImageLoaded = () => {
+  const generateThreadButton = () => {
+   return (
+     <button className="thread_btn" onClick={() => {
+       if(rgbValues !== undefined && dmcValues !== undefined) {
+        ThreadMatcher({rgbValues}, {dmcValues})}
+      }}>Create Thread List</button>
+   )
+ }
+  const retrievePalette = () => {
     const colorThief = new ColorThief()
     const img = document.querySelector('.preview')
     const colors = colorThief.getPalette(img, 10)
@@ -48,10 +59,13 @@ export const StitchForm = () => {
     swatch.style.setProperty('--color', color);
     swatch.setAttribute('color', color)
     palette.appendChild(swatch)
-    console.log(swatch)
     return palette;
             }, palette)}, [rgbValues]);
 
+
+  useEffect(() => {
+    getAllThreads().then(threads => setDMCValues(threads))
+   }, [])
 
   return (
     <div className="upload_container">
@@ -65,7 +79,8 @@ export const StitchForm = () => {
 
         </div>
       </div>
-      {displayImg ? generateButtons() : null}
+      {displayImg ? generatePaletteButton() : null}
+      {(rgbValues.length === 10) ? generateThreadButton() : null}
     </div>
   );
 };
