@@ -17,19 +17,16 @@ export const NavBar = ({clearUser, isAuthenticated}) => {
       <ul className="navbar">
           {isAuthenticated ?
           <li className="navlink_container">
-              <Link className="navlink" to="/stitchform"> Home </Link>
-          </li> ||
-               <li className="navlink_container">
+              <Link className="navlink" to="/stitchform"> Upload </Link>
+          </li> : null}
+          {isAuthenticated ?
+          <li className="navlink_container">
                   <Link className="navlink" to="/stitchlist"> My StitchList </Link>
-              </li>
-              : null}
-          {isAuthenticated
-              ? <li className="navlink_container">
-                  <span className="navlink" onClick={handleLogout}> Logout </span>
-              </li>
-              : null}
-    
-    </ul>
+          </li> : null}
+          {isAuthenticated ? <li className="navlink_container">
+          <span className="navlink" onClick={handleLogout}> Logout </span>
+          </li> : null}
+      </ul>
   );
 
 };

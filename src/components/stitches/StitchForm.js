@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom"
 import Axios from "axios";
 import ColorThief from 'colorthief'
-import {getAllThreads} from "../threads/ThreadManager"
+import { getAllThreads } from "../threads/ThreadManager"
 import { ThreadMatcher } from "../threads/ThreadMatcher";
+
 import "./StitchForm.css";
 
 export const StitchForm = () => {
@@ -13,7 +15,6 @@ export const StitchForm = () => {
   const [threadsRetrieval, setThreadsRetrieval] = useState(false)
 
 
-  
   const uploadImage = () => {
     const formData = new FormData();
     formData.append("file", imageSelected);
@@ -43,8 +44,6 @@ export const StitchForm = () => {
       }}}>Create Thread List</button>
    )
  }
-
- 
 
   const retrievePalette = () => {
     const colorThief = new ColorThief()
@@ -78,9 +77,10 @@ export const StitchForm = () => {
   return (
     <div className="upload_container">
       <div className="form_wrapper">
+        <h3 className="stitchform_header">Create New Stitch</h3>
         <input type="file" onChange={(e) => {setImageSelected(e.target.files[0]);}}/>
         <button onClick={uploadImage}>Upload Image</button>
-      <img className="preview" src={displayImg} crossOrigin="anonymous"/>
+      <img className="preview" src={displayImg} crossOrigin="anonymous" />
       {displayImg ? generatePaletteButton() : null}
       {(rgbValues.length === 10) ? generateThreadButton() : null}
       </div>
@@ -90,7 +90,7 @@ export const StitchForm = () => {
             </div>
           </div>
           <div className="threadList">
-            {threadsRetrieval ? <ThreadMatcher rgbValues={rgbValues} dmcValues={dmcValues} /> : null}
+            {threadsRetrieval ? <ThreadMatcher rgbValues={rgbValues} dmcValues={dmcValues} displayImg={displayImg} /> : null}
           </div>
       </div>    
     </div>

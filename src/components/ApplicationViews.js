@@ -3,6 +3,8 @@ import {Login} from "../components/auth/Login"
 import {Register} from "../components/auth/Register"
 import {Route} from "react-router-dom";
 import {StitchForm} from "../components/stitches/StitchForm"
+import {StitchList} from "../components/stitches/StitchList"
+import { StitchEditForm } from "./stitches/StitchEditForm";
 import {Redirect} from "react-router"
 
 
@@ -17,6 +19,14 @@ export const ApplicationViews = ({setAuthUser, isAuthenticated}) => {
 
       <Route exact path="/stitchform">
         {isAuthenticated ? <StitchForm /> : <Redirect to="/" />}
+      </Route>
+
+      <Route exact path="/stitchList">
+        {isAuthenticated ? <StitchList /> : <Redirect to="/" />}
+      </Route>
+
+      <Route path="/projects/:stitchId(\d+)/edit">
+      {isAuthenticated ? <StitchEditForm /> : <Redirect to="/" />}
       </Route>
 
       <Route path="/register" >
