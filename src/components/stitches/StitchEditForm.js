@@ -6,19 +6,20 @@ import { getStitchById } from '../stitches/StitchManager'
 
 export const StitchEditForm = () => {
     const currentUserId = parseInt(sessionStorage.getItem("stitch_user"))
-    const [stitch, setStitch] = useState[{ title: ""}]
+    const [stitch, setStitch] = useState({ title: "", imgUrl: "", rgbVal: [], dmcVal: []
+    })
     const [inputChange, setInputChange] = useState("")
 
     const history = useHistory()
-    const stitchId = useParams()
+    const {stitchId} = useParams()
 
     const handleFieldChange = (e) => {
         let selectedChange = e.target.value
         setInputChange(selectedChange)
     }
 
-    const updateExistingStitch = (e) => {
-        e.preventDefault()
+    const updateExistingStitch = () => {
+        
 
         const editedStitch = {
             id: stitchId,
@@ -40,6 +41,7 @@ export const StitchEditForm = () => {
     })
   }, [])  
 
+
  return (
     <div className="card_edit">
     <div className="card_content_edit">
@@ -53,7 +55,10 @@ export const StitchEditForm = () => {
                 {stitch.dmcVal}
             </div>
         </div>
-        <button className="update_btn" onClick={updateExistingStitch}>Update Stitch</button>
+        <button className="update_btn" onClick={() => {
+            updateExistingStitch()
+            history.push("/stitchlist")
+        }}>Update Stitch</button>
     </div>
 </div>
  )

@@ -21,7 +21,7 @@ export const ApplicationViews = ({setAuthUser, isAuthenticated}) => {
         {isAuthenticated ? <StitchForm /> : <Redirect to="/" />}
       </Route>
 
-      <Route exact path="/stitchList">
+      <Route path="/stitchList">
         {isAuthenticated ? <StitchList /> : <Redirect to="/" />}
       </Route>
 
