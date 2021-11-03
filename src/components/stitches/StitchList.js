@@ -3,6 +3,8 @@ import { useHistory } from 'react-router-dom'
 import { getStitches,  deleteStitch } from '../stitches/StitchManager'
 import {StitchCard} from '../stitches/StitchCard'
 
+import "./StitchForm.css"
+
 
 export const StitchList = () => {
     const [stitches, setStitches] = useState([])

@@ -3,6 +3,8 @@ import { useHistory, useParams } from 'react-router-dom'
 import { updateStitch } from '../stitches/StitchManager'
 import { getStitchById } from '../stitches/StitchManager'
 
+import "./StitchForm.css"
+
 
 export const StitchEditForm = () => {
     const currentUserId = parseInt(sessionStorage.getItem("stitch_user"))
@@ -43,10 +45,10 @@ export const StitchEditForm = () => {
 
 
  return (
-    <div className="card_edit">
-    <div className="card_content_edit">
+    <div className="card">
+    <div className="card_content">
         <input type="text" onChange={handleFieldChange}/>
-        <img src={stitch.imgUrl} alt="stitch image" />
+        <img className="preview" src={stitch.imgUrl} alt="stitch image" />
         <div className="palette_edit">
             <div className="rgb_values_edit">
                 {stitch.rgbVal}

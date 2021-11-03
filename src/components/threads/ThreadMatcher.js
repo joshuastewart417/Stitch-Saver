@@ -105,9 +105,11 @@ return (
             <div className="list_item">{dmcThreads[24][0]}: rgb({dmcThreads[24][1]}, {dmcThreads[24][2]}, {dmcThreads[24][3]})</div>
             <div className="list_item">{dmcThreads[27][0]}: rgb({dmcThreads[27][1]}, {dmcThreads[27][2]}, {dmcThreads[27][3]})</div>      
         </div>
-        <label htmlFor="stitch_title">Stitch Name</label>
-        <input type="text" onChange={handleInputChange}/>
-        <button className="save_btn" onClick={() => {handleClickSaveArticle()}}>Save Stitch</button>
+        <div className="submit_wrapper">
+            <p>Add Stitch Name</p>
+            <input className="stitch_title" type="text" onChange={handleInputChange}/>
+            <button className="save_btn" onClick={() => {handleClickSaveArticle()}}>Save Stitch</button>
+        </div>
     </>
 )
 }

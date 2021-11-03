@@ -75,24 +75,25 @@ export const StitchForm = () => {
    }, [])
 
   return (
-    <div className="upload_container">
-      <div className="form_wrapper">
-        <h3 className="stitchform_header">Create New Stitch</h3>
-        <input type="file" onChange={(e) => {setImageSelected(e.target.files[0]);}}/>
-        <button onClick={uploadImage}>Upload Image</button>
-      <img className="preview" src={displayImg} crossOrigin="anonymous" />
-      {displayImg ? generatePaletteButton() : null}
-      {(rgbValues.length === 10) ? generateThreadButton() : null}
-      </div>
-      <div className="list_container">
-          <div className="palette">
-            <div className="swatch">
+
+    <div className="stitch_wrap">
+      <div className="upload_container">
+        <div className="form_wrapper">
+          <h3 className="stitchform_header">Create New Stitch</h3>
+          <input type="file" onChange={(e) => {setImageSelected(e.target.files[0]);}}/>
+          <button onClick={uploadImage}>Upload Image</button>
+        <img className="preview" src={displayImg} crossOrigin="anonymous" />
+        {displayImg ? generatePaletteButton() : null}
+        {(rgbValues.length === 10) ? generateThreadButton() : null}
+        </div>
+        <div className="list_container">
+            <div className="palette">
+              <div className="swatch">
+              </div>
             </div>
-          </div>
-          <div className="threadList">
-            {threadsRetrieval ? <ThreadMatcher rgbValues={rgbValues} dmcValues={dmcValues} displayImg={displayImg} /> : null}
-          </div>
-      </div>    
+              {threadsRetrieval ? <ThreadMatcher rgbValues={rgbValues} dmcValues={dmcValues} displayImg={displayImg} /> : null}
+        </div>    
+      </div>
     </div>
   );
 };
