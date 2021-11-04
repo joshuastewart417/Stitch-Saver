@@ -76,17 +76,18 @@ export const StitchForm = () => {
 
   return (
 
-    <div className="stitch_wrap">
+    
       <div className="upload_container">
         <div className="form_wrapper">
           <h3 className="stitchform_header">Create New Stitch</h3>
-          <input type="file" onChange={(e) => {setImageSelected(e.target.files[0]);}}/>
-          <button onClick={uploadImage}>Upload Image</button>
+          <label or="Upload">Choose an image/design</label>
+          <input type="file" id="Upload" onChange={(e) => {setImageSelected(e.target.files[0]);}}/>
+          <button onClick={uploadImage}>Save Image</button>
         <img className="preview" src={displayImg} crossOrigin="anonymous" />
         {displayImg ? generatePaletteButton() : null}
         {(rgbValues.length === 10) ? generateThreadButton() : null}
         </div>
-        <div className="list_container">
+        <div>
             <div className="palette">
               <div className="swatch">
               </div>
@@ -94,6 +95,5 @@ export const StitchForm = () => {
               {threadsRetrieval ? <ThreadMatcher rgbValues={rgbValues} dmcValues={dmcValues} displayImg={displayImg} /> : null}
         </div>    
       </div>
-    </div>
   );
 };

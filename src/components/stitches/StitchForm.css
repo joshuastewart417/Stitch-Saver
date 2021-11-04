@@ -22,44 +22,91 @@ input[type=file] {
     text-align: center;
 }
 
-.stitch_wrap {
-    display:flex;
-    flex-direction:column;
-    justify-content: center;
-    align-items: center;
-    width: 1000px;
-    height: 1000px;
-    background-image: url(../stitches/stitchholder.png);
-    background-size:inherit;
-    background-repeat: no-repeat;
-}
+
 
 .upload_container {
-   
-}
-
-.form_wrapper {
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin:0 auto;
-    width:600px;
+    width: 800px;
+    height:auto;
+    background-color: rgba(255,255,255,0.5);
+    border:transparent;
+    border-radius: 15px;
+}
+
+.form_wrapper {
+    display:flex;
+    flex-direction: column;
+  
 }
 
 .preview {
-    width: 200px;
+    width: 500px;
+    height:auto;
+}
+
+.list1 {
+    background-color: var(--hue);
+    width:50px;
+    height:30px;
+}
+.list2 {
+    background-color: var(--hue);
+    width:50px;
+    height:30px;
+}
+.list3 {
+    background-color: var(--hue);
+    width:50px;
+    height:30px;
+}
+.list4 {
+    background-color: var(--hue);
+    width:50px;
+    height:30px;
+}
+.list5 {
+    background-color: var(--hue);
+    width:50px;
+    height:30px;
+}
+.list6 {
+    background-color: var(--hue);
+    width:50px;
+    height:30px;
+}
+.list7 {
+    background-color: var(--hue);
+    width:50px;
+    height:30px;
+}
+.list8 {
+    background-color: var(--hue);
+    width:50px;
+    height:30px;
+}
+.list9 {
+    background-color: var(--hue);
+    width:50px;
+    height:30px;
+}
+.list10 {
+    background-color: var(--hue);
+    width:50px;
+    height:30px;
 }
 
 .palette {
     display:flex;
     flex-direction: column;
-    width:50vw;
-    font-size:2vw;
+    width:200px;
 }
 .palette div { 
-    width: 20px; 
-    height: 20px; 
+    color:white;
+    width: 200px;  
     margin-top:1vw;
     background-color: var(--color);
     margin: 2px;
@@ -67,37 +114,39 @@ input[type=file] {
 
 .palette div:after {
         content: attr(color);
-        font-family:Arial, Helvetica, sans-serif;
         margin-left: 24px;
         margin-top:1vw;
         white-space: nowrap;
     }
 
-.list_container {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-    
-}
-
 .list_wrapper {
     margin-top:2vw;
-    width: 50vw;
+ 
 }
 
 .list_item {
     margin-top:1vw;
-    width: 100%;
+    text-align:left;
+    padding-left: 10px;
+    width:280px;
+    font-size: 18px;
+    background-color:white;
+    border:transparent;
+    border-radius: 10px;
+}
+
+.swatch_dmc {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .submit_wrapper {
     margin-top:3vw;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    width: 50vw;
-    height:1vw;
+    justify-content: center;
 }
 
 .card_content {
