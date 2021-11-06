@@ -1,6 +1,5 @@
 import React, {useEffect} from 'react'
 import { useHistory } from 'react-router-dom'
-import { updateStitch } from '../stitches/StitchManager'
 import "../stitches/StitchCard.css"
 
 
@@ -64,7 +63,7 @@ export const StitchCard = ({stitch, handleDeleteStitch}) => {
             <div className="button_wrapper">
                 <button className="delete_btn" onClick={() => {
                     handleDeleteStitch(stitch.id)}}>Delete Stitch</button>
-                <button className="edit_btn" onClick={() => history.push(`/projects/${stitch.id}/edit`)}>Edit Stitch</button>    
+                <button className="edit_btn" onClick={() => history.push(`/stitches/${stitch.id}/edit`)}>Edit Stitch</button>    
                     
             </div>
             </div>

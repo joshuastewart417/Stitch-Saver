@@ -1,62 +1,69 @@
 {
-  "projects": [
+  "stitches": [
     {
+      "id": 1,
       "userId": 1,
-      "title": "Past project",
-      "imgUrl": "http://res.cloudinary.com/dcxvvavft/image/upload/v1635517687/vrdpp3akeqe4ghz3t76r.jpg",
+      "imgUrl": "http://res.cloudinary.com/dcxvvavft/image/upload/v1636228914/xkvq9lp9hhskl9stwc54.jpg",
+      "title": "Bee Design ",
       "rgbVal": [
         [
-          45,
-          45,
-          41
+          230,
+          229,
+          225
         ],
         [
-          208,
-          201,
-          187
+          52,
+          52,
+          44
         ],
         [
-          141,
-          112,
-          46
+          179,
+          168,
+          134
         ],
         [
-          124,
-          68,
-          36
-        ],
-        [
-          124,
-          121,
-          111
-        ],
-        [
-          164,
-          158,
-          147
-        ],
-        [
-          157,
+          178,
           148,
-          126
+          79
         ],
         [
-          248,
-          244,
-          233
+          147,
+          97,
+          62
+        ],
+        [
+          206,
+          198,
+          177
         ],
         [
           153,
-          124,
-          122
+          176,
+          174
         ],
         [
-          81,
-          132,
-          207
+          188,
+          206,
+          201
+        ],
+        [
+          105,
+          157,
+          142
+        ],
+        [
+          201,
+          162,
+          166
         ]
       ],
       "dmcVal": [
+        [
+          "Beaver Gray Vy Lt",
+          230,
+          232,
+          232
+        ],
         [
           "Avocado Grn Black",
           49,
@@ -64,289 +71,113 @@
           25
         ],
         [
-          "Forest Green Lt",
-          200,
-          216,
-          184
+          "Mocha Brown Med",
+          179,
+          159,
+          139
         ],
         [
-          "Olive Green V Dk",
-          130,
-          123,
-          48
-        ],
-        [
-          "Brown Med",
-          122,
-          69,
-          31
-        ],
-        [
-          "Beaver Gray Dk",
-          135,
-          125,
-          115
-        ],
-        [
-          "Beaver Gray Med",
-          176,
-          166,
-          156
-        ],
-        [
-          "Beige Gray Dark",
-          164,
-          152,
-          120
-        ],
-        [
-          "Mocha Brn Ult Vy Lt",
-          250,
-          246,
-          240
-        ],
-        [
-          "Shell Gray Dark",
-          145,
-          123,
-          115
-        ],
-        [
-          "Baby Blue Dark",
-          90,
+          "Golden Olive Md",
+          170,
           143,
-          184
-        ]
-      ],
-      "timestamp": 1635517709253,
-      "id": 1
-    },
-    {
-      "userId": 1,
-      "title": "New Project Idea",
-      "imgUrl": "http://res.cloudinary.com/dcxvvavft/image/upload/v1636128778/ttu8usbqfui9ptf1s3m3.jpg",
-      "rgbVal": [
-        [
-          133,
-          150,
-          164
-        ],
-        [
-          50,
-          58,
-          52
-        ],
-        [
-          125,
-          102,
-          67
-        ],
-        [
-          228,
-          218,
-          211
-        ],
-        [
-          115,
-          61,
-          63
-        ],
-        [
-          189,
-          215,
-          234
-        ],
-        [
-          155,
-          193,
-          225
-        ],
-        [
-          190,
-          173,
-          159
-        ],
-        [
-          104,
-          99,
-          104
-        ],
-        [
-          41,
-          189,
-          231
-        ]
-      ],
-      "dmcVal": [
-        [
-          "Lavender Blue Med",
-          123,
-          142,
-          171
-        ],
-        [
-          "Pewter Gray Vy Dk",
-          66,
-          66,
-          66
-        ],
-        [
-          "Golden Olive Vy Dk",
-          126,
-          107,
-          66
-        ],
-        [
-          "Mocha Brown Vy Lt",
-          227,
-          216,
-          204
-        ],
-        [
-          "Antique Mauve Vy Dk",
-          113,
-          65,
-          73
-        ],
-        [
-          "Blue Very Light",
-          189,
-          221,
-          237
-        ],
-        [
-          "Blue Light",
-          161,
-          194,
-          215
-        ],
-        [
-          "Beaver Gray Lt",
-          188,
-          180,
-          172
-        ],
-        [
-          "Pewter Gray",
-          108,
-          108,
-          108
-        ],
-        [
-          "Electric Blue Medium",
-          48,
-          194,
-          236
-        ]
-      ],
-      "timestamp": 1636129449083,
-      "id": 2
-    },
-    {
-      "userId": 1,
-      "title": "whatever",
-      "imgUrl": "http://res.cloudinary.com/dcxvvavft/image/upload/v1636139070/r4da3pqqj2o2s7l7amyf.jpg",
-      "rgbVal": [
-        [
-          63,
-          81,
-          47
-        ],
-        [
-          182,
-          157,
-          34
-        ],
-        [
-          210,
-          208,
-          189
-        ],
-        [
-          231,
-          208,
-          75
-        ],
-        [
-          147,
-          56,
-          27
-        ],
-        [
-          187,
-          160,
-          127
-        ],
-        [
-          111,
-          106,
-          43
-        ],
-        [
-          190,
-          141,
           86
         ],
         [
-          169,
-          90,
-          55
-        ],
-        [
-          231,
-          169,
-          68
-        ]
-      ],
-      "dmcVal": [
-        [
-          "Forest Green Vy Dk",
-          64,
-          82,
-          48
-        ],
-        [
-          "Old Gold Dark",
-          188,
-          141,
-          14
-        ],
-        [
-          "Forest Green Lt",
-          200,
-          216,
-          184
-        ],
-        [
-          "Topaz Light",
-          253,
-          215,
-          85
-        ],
-        [
-          "Mahogany Dark",
-          143,
-          67,
-          15
-        ],
-        [
-          "Beige Brown Lt",
-          182,
-          155,
-          126
-        ],
-        [
-          "Avocado Green Md",
-          98,
-          113,
+          "Brown Light",
+          152,
+          94,
           51
         ],
         [
-          "Hazelnut Brown",
-          183,
-          139,
-          97
+          "Fern Green Vy Lt",
+          196,
+          205,
+          172
         ],
+        [
+          "Gray Green Med",
+          152,
+          174,
+          174
+        ],
+        [
+          "Gray Green Light",
+          189,
+          203,
+          203
+        ],
+        [
+          "Celadon Green",
+          101,
+          165,
+          125
+        ],
+        [
+          "Antique Violet Light",
+          183,
+          157,
+          167
+        ]
+      ],
+      "timestamp": 1636229201727
+    },
+    {
+      "userId": 1,
+      "title": "Feather Stitchwork",
+      "imgUrl": "http://res.cloudinary.com/dcxvvavft/image/upload/v1636229117/m87icjrdw0arjynsriar.jpg",
+      "rgbVal": [
+        [
+          175,
+          100,
+          42
+        ],
+        [
+          42,
+          180,
+          126
+        ],
+        [
+          103,
+          58,
+          37
+        ],
+        [
+          55,
+          84,
+          180
+        ],
+        [
+          11,
+          13,
+          12
+        ],
+        [
+          223,
+          218,
+          95
+        ],
+        [
+          193,
+          89,
+          186
+        ],
+        [
+          18,
+          100,
+          68
+        ],
+        [
+          32,
+          48,
+          99
+        ],
+        [
+          56,
+          32,
+          21
+        ]
+      ],
+      "dmcVal": [
         [
           "Mahogany Med",
           179,
@@ -354,135 +185,62 @@
           43
         ],
         [
-          "Autumn Gold Dk",
-          242,
-          151,
-          70
-        ]
-      ],
-      "timestamp": 1636139083446,
-      "id": 3
-    },
-    {
-      "userId": 1,
-      "title": "Mind Blowing Project Idea",
-      "imgUrl": "http://res.cloudinary.com/dcxvvavft/image/upload/v1636157299/kypjqhdijwizgnnardbq.jpg",
-      "rgbVal": [
-        [
-          192,
-          147,
-          84
+          "Emerald Green Lt",
+          27,
+          157,
+          107
         ],
         [
-          7,
-          5,
-          4
-        ],
-        [
-          103,
-          77,
-          50
-        ],
-        [
-          168,
-          53,
-          46
-        ],
-        [
-          221,
-          214,
-          181
-        ],
-        [
-          113,
-          140,
-          101
-        ],
-        [
-          54,
-          80,
-          61
-        ],
-        [
-          54,
-          36,
-          19
-        ],
-        [
-          44,
-          113,
-          133
-        ],
-        [
-          31,
+          "Coffee Brown Dk",
+          101,
           57,
-          74
-        ]
-      ],
-      "dmcVal": [
-        [
-          "Golden Olive",
-          189,
-          155,
-          81
+          25
         ],
         [
-          "Black",
-          0,
-          0,
-          0
+          "Baby Blue Very Dark",
+          53,
+          102,
+          139
         ],
         [
-          "Beige Brown Vy Dk",
-          89,
-          73,
-          55
+          "Black Brown",
+          30,
+          17,
+          8
         ],
         [
-          "Terra Cotta Dark",
-          152,
-          68,
-          54
+          "Moss Green Lt",
+          224,
+          232,
+          104
         ],
         [
-          "Yellow Beige Lt",
-          231,
-          214,
-          193
+          "Lavender Dark",
+          163,
+          123,
+          167
         ],
         [
-          "Forest Green Med",
-          115,
-          139,
-          91
+          "Emerald Green Vy Dk",
+          21,
+          111,
+          73
         ],
         [
-          "Forest Green Vy Dk",
-          64,
-          82,
-          48
+          "Navy Blue Dark",
+          33,
+          48,
+          99
         ],
         [
           "Coffee Brown Ult Dk",
           54,
           31,
           14
-        ],
-        [
-          "Blue Very Dark",
-          57,
-          105,
-          135
-        ],
-        [
-          "Navy Blue Very Dark",
-          27,
-          40,
-          83
         ]
       ],
-      "timestamp": 1636159120914,
-      "id": 4
+      "timestamp": 1636229138434,
+      "id": 2
     }
   ],
   "users": [

@@ -21,10 +21,11 @@ export const StitchList = () => {
         deleteStitch(id)
         .then(() => getStitches().then(setStitches)) 
     }
+    
+    useEffect(() => {
+        retrieveStitches()
+    }, [])
 
-useEffect(() => {
- retrieveStitches()
-}, [])
 
 return (
     <div className="cards_list">
