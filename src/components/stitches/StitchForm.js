@@ -5,7 +5,7 @@ import ColorThief from 'colorthief'
 import { getAllThreads } from "../threads/ThreadManager"
 import { ThreadMatcher } from "../threads/ThreadMatcher";
 
-import "./StitchForm.css";
+import "../stitches/StitchForm.css";
 
 export const StitchForm = () => {
   const [imageSelected, setImageSelected] = useState("");
@@ -80,14 +80,15 @@ export const StitchForm = () => {
       <div className="upload_container">
         <div className="form_wrapper">
           <h3 className="stitchform_header">Create New Stitch</h3>
-          <label or="Upload">Choose an image/design</label>
           <input type="file" id="Upload" onChange={(e) => {setImageSelected(e.target.files[0]);}}/>
-          <button onClick={uploadImage}>Save Image</button>
+          <button className="load_button" onClick={uploadImage}>Load Design</button>
         <img className="preview" src={displayImg} crossOrigin="anonymous" />
-        {displayImg ? generatePaletteButton() : null}
-        {(rgbValues.length === 10) ? generateThreadButton() : null}
+          <div className="generate_buttons">
+           {displayImg ? generatePaletteButton() : null}
+            {(rgbValues.length === 10) ? generateThreadButton() : null}
+          </div>
         </div>
-        <div>
+        <div className="value_wrapper">
             <div className="palette">
               <div className="swatch">
               </div>

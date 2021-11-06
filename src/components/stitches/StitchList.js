@@ -27,8 +27,8 @@ useEffect(() => {
 }, [])
 
 return (
-    <div>
-        {stitches.map((stitch) => <StitchCard key={stitch.id} stitch={stitch} handleDeleteStitch={handleDeleteStitch}/>)}
+    <div className="cards_list">
+        {stitches.map(stitch => <StitchCard key={stitch.id} stitch={stitch} handleDeleteStitch={handleDeleteStitch}/>)}
     </div>
 )
 }

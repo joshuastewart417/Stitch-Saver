@@ -9,6 +9,8 @@
     align-items: center;
     margin-top: 0;
     border-bottom: 2px dashed #eaa635;
+    background-image:url(../stitches/cloth-bckg.jpg);
+    height: 210px;
 }
 
 .logo {

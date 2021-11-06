@@ -1,25 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
 
 .logo {
     width: 25vw;
 }
 
 html {
-    background-image:url(../stitches/cloth-bckg2.jpg);
-    background-size:cover;
+    background-image:url(../stitches/colorcloth.jpg);
+    background-size:100%;
     font-family: 'Quicksand', sans-serif;
 }
 
 input[type=file] {
     padding:10px;
-    border: 2px solid #1a64ac;
+    border: 2px dashed #1a64ac;
     border-radius:15px;
+    width:30vw;
     box-shadow:0 0 5px 4px rgba(0,0,0,0.06);
   } 
 
-.stitchform_header {
+button {
+    background-color:#eaa635;
+    border-style:none;
+    border-radius: 15px;
+    box-shadow: 0px 2px 1px darkorange;
+    width: 15vw;
     color: white;
+    
+}
+
+.stitchform_header {
+    color: #1a64ac;
     font-weight:bold;
+    font-size: 2.5vw;
     text-align: center;
+    text-shadow: 1px 1px 2px white;
 }
 
 
@@ -30,109 +45,82 @@ input[type=file] {
     justify-content: center;
     align-items: center;
     margin:0 auto;
-    width: 800px;
-    height:auto;
-    background-color: rgba(255,255,255,0.5);
-    border:transparent;
-    border-radius: 15px;
 }
 
 .form_wrapper {
     display:flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed #eaa635;
+    border-radius: 15px;
+    background-image: url(../stitches/cloth-bckg.jpg);
+    width: 50vw;
   
 }
 
+
+.generate_buttons {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.palette_btn {
+    margin-right:3vw;
+}
+
+.load_button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 .preview {
-    width: 500px;
+    width: 40vw;
     height:auto;
 }
 
-.list1 {
-    background-color: var(--hue);
-    width:50px;
-    height:30px;
-}
-.list2 {
-    background-color: var(--hue);
-    width:50px;
-    height:30px;
-}
-.list3 {
-    background-color: var(--hue);
-    width:50px;
-    height:30px;
-}
-.list4 {
-    background-color: var(--hue);
-    width:50px;
-    height:30px;
-}
-.list5 {
-    background-color: var(--hue);
-    width:50px;
-    height:30px;
-}
-.list6 {
-    background-color: var(--hue);
-    width:50px;
-    height:30px;
-}
-.list7 {
-    background-color: var(--hue);
-    width:50px;
-    height:30px;
-}
-.list8 {
-    background-color: var(--hue);
-    width:50px;
-    height:30px;
-}
-.list9 {
-    background-color: var(--hue);
-    width:50px;
-    height:30px;
-}
-.list10 {
-    background-color: var(--hue);
-    width:50px;
-    height:30px;
-}
+
 
 .palette {
     display:flex;
     flex-direction: column;
-    width:200px;
+    width:15vw;
+    float:left;
 }
 .palette div { 
-    color:white;
-    width: 200px;  
-    margin-top:1vw;
+    color: white;
+    font-size:1.5vw;
+    height:2.5vw;
+    text-shadow: 1px 1px 2px black;
+    text-align: center;
+    border: 1px solid darkslategray;
     background-color: var(--color);
-    margin: 2px;
 }
 
 .palette div:after {
         content: attr(color);
-        margin-left: 24px;
-        margin-top:1vw;
         white-space: nowrap;
     }
 
 .list_wrapper {
-    margin-top:2vw;
- 
+    display: flex;
+    flex-direction: column;
+    float:right;
+    margin-left: 20px;
+    width: 33.5vw;
 }
 
 .list_item {
-    margin-top:1vw;
-    text-align:left;
-    padding-left: 10px;
-    width:280px;
-    font-size: 18px;
-    background-color:white;
-    border:transparent;
-    border-radius: 10px;
+    color: white;
+    font-size:1.5vw;
+    height:2.5vw;
+    text-shadow: 1px 1px 2px black;
+    text-align: center;
+    border: 1px solid darkslategray;
+    margin-left:-1.9vw;
 }
 
 .swatch_dmc {
@@ -141,12 +129,31 @@ input[type=file] {
     align-items: center;
 }
 
+.dmc_button {
+    display:flex;
+    flex-direction: column;
+}
+
 .submit_wrapper {
-    margin-top:3vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-left: -15vw;
+    background-color:rgba(255, 255, 255, 0.75);
+    width: 50vw;
+}
+
+.value_wrapper {
+    background-color:rgba(255, 255, 255, 0.75);
+}
+
+.name_title {
+    color: #1a64ac;
+    font-weight:bold;
+    font-size: 2.5vw;
+    text-align: center;
+    text-shadow: 1px 1px 2px white;
 }
 
 .card_content {
@@ -155,10 +162,6 @@ input[type=file] {
     justify-content: center;
     align-items: center;
     
-}
-
-.card {
-    border: 2px solid gray;
 }
 
 .card_edit {
@@ -178,14 +181,14 @@ input[type=file] {
     flex-direction: column;
 }
 
-.card_img {
-    width:50vw;
+
+.save_btn {
+    margin-top:10px;
+    margin-bottom:15px;
 }
 
-.button_wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 30 vw;
-    margin-bottom: 2vw;
+.stitch_title {
+    color: darkslategray;
+    margin-bottom:5px;
+
 }
