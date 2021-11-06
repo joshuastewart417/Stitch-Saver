@@ -8,28 +8,25 @@ export const NavBar = ({clearUser, isAuthenticated}) => {
 
   const handleLogout = () => {
       clearUser();
-      history.push("/")
   }
 
 
 
   return (
       <ul className="navbar">
+          <img src="../images/SS-Logo.png" className="logo"/>
           {isAuthenticated ?
-          <li className="navlink_container">
-              <Link className="navlink" to="/stitchform"> Home </Link>
-          </li> ||
-               <li className="navlink_container">
-                  <Link className="navlink" to="/stitchlist"> My StitchList </Link>
-              </li>
-              : null}
-          {isAuthenticated
-              ? <li className="navlink_container">
-                  <span className="navlink" onClick={handleLogout}> Logout </span>
-              </li>
-              : null}
-    
-    </ul>
+          <li className="uploadnav_container">
+                  <Link className="navlink1" to="/stitchform"> Upload </Link>
+          </li> : null}
+          {isAuthenticated ?
+          <li className="stitchlistnav_container">
+                  <Link className="navlink2" to="/stitchlist"> StitchList </Link>
+          </li> : null}
+          {isAuthenticated ? <li className="logoutnav_container">
+                  <Link className="navlink3" onClick={handleLogout} to="/">Logout</Link>
+          </li> : null}
+      </ul>
   );
 
 };

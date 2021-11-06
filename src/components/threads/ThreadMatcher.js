@@ -1,7 +1,45 @@
-export const ThreadMatcher = ({rgbValues, dmcValues}) => {
+import React, { useState, useEffect } from 'react'
+import { useHistory } from 'react-router-dom'
+import { stitchSave } from '../stitches/StitchManager'
 
-const threads = dmcValues
-const swatches = rgbValues
+export const ThreadMatcher = ({rgbValues, dmcValues, displayImg}) => {
+  const [stitchInput, setStitchInput] = useState("")
+
+  const threads = dmcValues
+  const swatches = rgbValues
+  const history = useHistory()
+
+ const handleInputChange = (e) => {
+     let selectedVal = e.target.value
+     setStitchInput(selectedVal)
+ }
+
+
+ const handleClickSaveArticle = () => {
+   
+  
+  
+    const newStitch = {
+      userId: parseInt(sessionStorage.getItem("stitch_user")),
+      title: stitchInput,
+      imgUrl: displayImg,
+      rgbVal: rgbValues,
+      dmcVal: [dmcThreads[0], dmcThreads[3], dmcThreads[6], dmcThreads[9], dmcThreads[12], dmcThreads[15], dmcThreads[18], dmcThreads[21], dmcThreads[24], dmcThreads[27]],
+      timestamp: Date.now(),
+    };
+  
+    if (
+        newStitch.userId === 0 ||
+        newStitch.imgUrl === "" ||
+        newStitch.rgbVal === undefined ||
+        newStitch.dmcVal === undefined
+    ) {
+        window.alert("Please complete form before saving");
+    } else {
+        stitchSave(newStitch)
+            .then(() => history.push("/stitchlist"));
+    }
+  };
 
 
     const distanceFromColor = (idx, r, g, b) => {
@@ -40,8 +78,7 @@ const swatches = rgbValues
 	        let dmcG = threads[distanceList[0][1]].green;
 	        let dmcB = threads[distanceList[0][1]].blue;
 
-            let matchedThreads = {dmcDesc, dmcR, dmcG, dmcB}
-
+            let matchedThreads = [dmcDesc, dmcR, dmcG, dmcB]
             threadList.push(matchedThreads)
 
         }
@@ -51,23 +88,39 @@ const swatches = rgbValues
 
 
 let dmcThreads = matchDMC()
-console.log(dmcThreads[0])
 
 
 return (
     <>
-        <ul className="list_wrapper">
-            <li className="list_item">{dmcThreads[0].dmcDesc}: rgb({dmcThreads[0].dmcR}, {dmcThreads[0].dmcG}, {dmcThreads[0].dmcB})</li>
-            <li className="list_item">{dmcThreads[3].dmcDesc}: rgb({dmcThreads[3].dmcR}, {dmcThreads[3].dmcG}, {dmcThreads[3].dmcB})</li>
-            <li className="list_item">{dmcThreads[6].dmcDesc}: rgb({dmcThreads[6].dmcR}, {dmcThreads[6].dmcG}, {dmcThreads[6].dmcB})</li>
-            <li className="list_item">{dmcThreads[9].dmcDesc}: rgb({dmcThreads[9].dmcR}, {dmcThreads[9].dmcG}, {dmcThreads[9].dmcB})</li>
-            <li className="list_item">{dmcThreads[12].dmcDesc}: rgb({dmcThreads[12].dmcR}, {dmcThreads[12].dmcG}, {dmcThreads[12].dmcB})</li>
-            <li className="list_item">{dmcThreads[15].dmcDesc}: rgb({dmcThreads[15].dmcR}, {dmcThreads[15].dmcG}, {dmcThreads[15].dmcB})</li>
-            <li className="list_item">{dmcThreads[18].dmcDesc}: rgb({dmcThreads[18].dmcR}, {dmcThreads[18].dmcG}, {dmcThreads[18].dmcB})</li>
-            <li className="list_item">{dmcThreads[21].dmcDesc}: rgb({dmcThreads[21].dmcR}, {dmcThreads[21].dmcG}, {dmcThreads[21].dmcB})</li>
-            <li className="list_item">{dmcThreads[24].dmcDesc}: rgb({dmcThreads[24].dmcR}, {dmcThreads[24].dmcG}, {dmcThreads[24].dmcB})</li>
-            <li className="list_item">{dmcThreads[27].dmcDesc}: rgb({dmcThreads[27].dmcR}, {dmcThreads[27].dmcG}, {dmcThreads[27].dmcB})</li>      
-        </ul>
+    <div className="dmc_button">
+        <div className="list_wrapper">
+            <div className="list_item" style={{backgroundColor: `rgb(${dmcThreads[0][1]}, ${dmcThreads[0][2]}, ${dmcThreads[0][3]})`}}>
+                {dmcThreads[0][0]}: rgb({dmcThreads[0][1]}, {dmcThreads[0][2]}, {dmcThreads[0][3]})</div>
+            <div className="list_item" style={{backgroundColor: `rgb(${dmcThreads[3][1]}, ${dmcThreads[3][2]}, ${dmcThreads[3][3]})`}}>
+                {dmcThreads[3][0]}: rgb({dmcThreads[3][1]}, {dmcThreads[3][2]}, {dmcThreads[3][3]})</div>
+            <div className="list_item" style={{backgroundColor: `rgb(${dmcThreads[6][1]}, ${dmcThreads[6][2]}, ${dmcThreads[6][3]})`}}>
+                {dmcThreads[6][0]}: rgb({dmcThreads[6][1]}, {dmcThreads[6][2]}, {dmcThreads[6][3]})</div>
+            <div className="list_item" style={{backgroundColor: `rgb(${dmcThreads[9][1]}, ${dmcThreads[9][2]}, ${dmcThreads[9][3]})`}}>
+                {dmcThreads[9][0]}: rgb({dmcThreads[9][1]}, {dmcThreads[9][2]}, {dmcThreads[9][3]})</div>
+            <div className="list_item" style={{backgroundColor: `rgb(${dmcThreads[12][1]}, ${dmcThreads[12][2]}, ${dmcThreads[12][3]})`}}>
+                {dmcThreads[12][0]}: rgb({dmcThreads[12][1]}, {dmcThreads[12][2]}, {dmcThreads[12][3]})</div>
+            <div className="list_item" style={{backgroundColor: `rgb(${dmcThreads[15][1]}, ${dmcThreads[15][2]}, ${dmcThreads[15][3]})`}}>
+                {dmcThreads[15][0]}: rgb({dmcThreads[15][1]}, {dmcThreads[15][2]}, {dmcThreads[15][3]})</div>
+            <div className="list_item" style={{backgroundColor: `rgb(${dmcThreads[18][1]}, ${dmcThreads[18][2]}, ${dmcThreads[18][3]})`}}>
+                {dmcThreads[18][0]}: rgb({dmcThreads[18][1]}, {dmcThreads[18][2]}, {dmcThreads[18][3]})</div>
+            <div className="list_item" style={{backgroundColor: `rgb(${dmcThreads[21][1]}, ${dmcThreads[21][2]}, ${dmcThreads[21][3]})`}}>
+                {dmcThreads[21][0]}: rgb({dmcThreads[21][1]}, {dmcThreads[21][2]}, {dmcThreads[21][3]})</div>
+            <div className="list_item" style={{backgroundColor: `rgb(${dmcThreads[24][1]}, ${dmcThreads[24][2]}, ${dmcThreads[24][3]})`}}>
+                {dmcThreads[24][0]}: rgb({dmcThreads[24][1]}, {dmcThreads[24][2]}, {dmcThreads[24][3]})</div>
+            <div className="list_item" style={{backgroundColor: `rgb(${dmcThreads[27][1]}, ${dmcThreads[27][2]}, ${dmcThreads[27][3]})`}}>
+                {dmcThreads[27][0]}: rgb({dmcThreads[27][1]}, {dmcThreads[27][2]}, {dmcThreads[27][3]})</div>      
+        </div>
+        <div className="submit_wrapper">
+            <p className="name_title">Name Your Stitch</p>
+            <input className="stitch_title" type="text" onChange={handleInputChange}/>
+            <button className="save_btn" onClick={() => {handleClickSaveArticle()}}>Save Stitch</button>
+        </div>
+    </div>
     </>
 )
 }

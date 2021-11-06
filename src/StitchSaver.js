@@ -8,7 +8,7 @@ export const StitchSaver = () => {
     const [isAuthenticated, setIsAuthenticated] = useState(sessionStorage.getItem("stitch_user") !== null)
 
     const setAuthUser = (user) => {
-        sessionStorage.setItem("stitch_user", JSON.stringify(user))
+        sessionStorage.setItem("stitch_user", JSON.stringify(user.id))
         setIsAuthenticated(sessionStorage.getItem("stitch_user") !== null)
     }
 

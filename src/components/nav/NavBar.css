@@ -1,18 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&family=Sacramento&display=swap');
+
+
 .navbar {
+    font-family: 'Quicksand', sans-serif;
     display:flex;
     flex-direction: row;
-    justify-content:right;
+    justify-content:space-evenly;
     align-items: center;
-    margin-right: 10vw;
+    margin-top: 0;
+    border-bottom: 2px dashed #eaa635;
+    background-image:url(../stitches/cloth-bckg.jpg);
+    height: 210px;
 }
 
-.navlink_container {
-    display:flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+.logo {
+    margin-right: 2vw;
+}
+
+.uploadnav_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    height: 180px;
+    background-image:url(../stitches/flowerborder.png);
+    background-size: 220px 180px;
+    background-repeat: no-repeat;
     
 }
 
-.navlink {
-    margin-right:15vw;
+.stitchlistnav_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 120px;
+    background-image:url(../stitches/purple-border.png);
+    background-size:200px 120px;
+    background-repeat: no-repeat;
+    margin-left:10px;
 }
+
+.logoutnav_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 200px;
+    background-image:url(../stitches/starborder.png);
+    background-size: 250px 200px;
+    background-repeat: no-repeat;
+}
+
+.navlink {
+    text-align: center;
+    list-style-type: none;
+}
+
+.navlink1 {
+    text-decoration: none;
+    
+    font-size:large;
+    font-weight:bold;
+}
+    .navlink1:link {
+        color: #eaa635;
+        text-shadow: 2px 2px 3px white;
+    }
+
+    .navlink1:visited {
+        color: #eaa635;
+        text-shadow: 2px 2px 3px white;
+    }
+
+    .navlink1:hover {
+        color: #628c40;
+        border-bottom: 2px dashed #eaa635;
+    }
+
+.navlink2 {
+        text-decoration: none;
+        
+        font-size:large;
+        font-weight:bold;
+    }
+        .navlink2:link {
+            color: #eaa635;
+            text-shadow: 2px 2px 3px white;
+        }
+    
+        .navlink2:visited {
+            color: #eaa635;
+            text-shadow: 2px 2px 3px white;
+        }
+    
+        .navlink2:hover {
+            color: #5e237c;
+            border-bottom: 2px dashed #eaa635;
+        }
+
+.navlink3 {
+            text-decoration: none;
+            
+            font-size:large;
+            font-weight:bold;
+        }
+            .navlink3:link {
+                color: #eaa635;
+                text-shadow: 2px 2px 3px white;
+            }
+        
+            .navlink3:visited {
+                color: #eaa635;
+                text-shadow: 2px 2px 3px white;
+            }
+        
+            .navlink3:hover {
+                color: #1a64ac;
+                border-bottom: 2px dashed #eaa635;
+            }

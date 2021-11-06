@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom"
 import Axios from "axios";
 import ColorThief from 'colorthief'
-import {getAllThreads} from "../threads/ThreadManager"
+import { getAllThreads } from "../threads/ThreadManager"
 import { ThreadMatcher } from "../threads/ThreadMatcher";
-import "./StitchForm.css";
+
+import "../stitches/StitchForm.css";
 
 export const StitchForm = () => {
   const [imageSelected, setImageSelected] = useState("");
@@ -13,7 +15,6 @@ export const StitchForm = () => {
   const [threadsRetrieval, setThreadsRetrieval] = useState(false)
 
 
-  
   const uploadImage = () => {
     const formData = new FormData();
     formData.append("file", imageSelected);
@@ -43,8 +44,6 @@ export const StitchForm = () => {
       }}}>Create Thread List</button>
    )
  }
-
- 
 
   const retrievePalette = () => {
     const colorThief = new ColorThief()
@@ -76,23 +75,26 @@ export const StitchForm = () => {
    }, [])
 
   return (
-    <div className="upload_container">
-      <div className="form_wrapper">
-        <input type="file" onChange={(e) => {setImageSelected(e.target.files[0]);}}/>
-        <button onClick={uploadImage}>Upload Image</button>
-      <img className="preview" src={displayImg} crossOrigin="anonymous"/>
-      {displayImg ? generatePaletteButton() : null}
-      {(rgbValues.length === 10) ? generateThreadButton() : null}
-      </div>
-      <div className="list_container">
-          <div className="palette">
-            <div className="swatch">
+
+    
+      <div className="upload_container">
+        <div className="form_wrapper">
+          <h3 className="stitchform_header">Create New Stitch</h3>
+          <input type="file" id="Upload" onChange={(e) => {setImageSelected(e.target.files[0]);}}/>
+          <button className="load_button" onClick={uploadImage}>Load Design</button>
+        <img className="preview" src={displayImg} crossOrigin="anonymous" />
+          <div className="generate_buttons">
+           {displayImg ? generatePaletteButton() : null}
+            {(rgbValues.length === 10) ? generateThreadButton() : null}
+          </div>
+        </div>
+        <div className="value_wrapper">
+            <div className="palette">
+              <div className="swatch">
+              </div>
             </div>
-          </div>
-          <div className="threadList">
-            {threadsRetrieval ? <ThreadMatcher rgbValues={rgbValues} dmcValues={dmcValues} /> : null}
-          </div>
-      </div>    
-    </div>
+              {threadsRetrieval ? <ThreadMatcher rgbValues={rgbValues} dmcValues={dmcValues} displayImg={displayImg} /> : null}
+        </div>    
+      </div>
   );
 };
