@@ -50,7 +50,7 @@ export const Login = ({setAuthUser}) => {
                             required autoFocus />
                     </fieldset>
                     <fieldset>
-                        <label htmlFor="inputEmail"> Email address: </label>
+                        <label htmlFor="inputEmail"> Email: </label>
                         <input ref={email} type="email"
                             id="email"
                             className="form-control"

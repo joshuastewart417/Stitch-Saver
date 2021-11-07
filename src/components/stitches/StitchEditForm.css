@@ -9,9 +9,12 @@
 
 .card_edit img {
     width:40vw;
+    margin-top:1vw;
 }
 
 .palette_edit {
     display: flex;
     flex-direction: column;
 }
+
+
