@@ -14,7 +14,7 @@ export const NavBar = ({clearUser, isAuthenticated}) => {
 
   return (
       <ul className="navbar">
-          <img src="../images/SS-Logo.png" className="logo"/>
+          <img src="../images/SS-Logo2.png" className="logo"/>
           {isAuthenticated ?
           <li className="uploadnav_container">
                   <Link className="navlink1" to="/stitchform"> Upload </Link>

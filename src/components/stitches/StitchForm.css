@@ -29,6 +29,11 @@ button {
     
 }
 
+button:hover {
+    box-shadow: 2px 3px 3px gray;
+    cursor:pointer;
+}
+
 .stitchform_header {
     color: #1a64ac;
     font-weight:bold;

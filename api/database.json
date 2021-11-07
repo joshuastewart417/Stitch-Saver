@@ -122,9 +122,10 @@
       "timestamp": 1636229201727
     },
     {
+      "id": 2,
       "userId": 1,
-      "title": "Feather Stitchwork",
       "imgUrl": "http://res.cloudinary.com/dcxvvavft/image/upload/v1636229117/m87icjrdw0arjynsriar.jpg",
+      "title": "Feather Stitch Design",
       "rgbVal": [
         [
           175,
@@ -239,8 +240,128 @@
           14
         ]
       ],
-      "timestamp": 1636229138434,
-      "id": 2
+      "timestamp": 1636232392404
+    },
+    {
+      "userId": 1,
+      "title": "Flower Hedgehog",
+      "imgUrl": "http://res.cloudinary.com/dcxvvavft/image/upload/v1636318395/yjeicv74crj6g4fkpmuf.jpg",
+      "rgbVal": [
+        [
+          37,
+          41,
+          34
+        ],
+        [
+          138,
+          57,
+          43
+        ],
+        [
+          214,
+          212,
+          209
+        ],
+        [
+          150,
+          106,
+          78
+        ],
+        [
+          166,
+          129,
+          116
+        ],
+        [
+          127,
+          126,
+          119
+        ],
+        [
+          182,
+          156,
+          132
+        ],
+        [
+          166,
+          165,
+          159
+        ],
+        [
+          188,
+          167,
+          157
+        ],
+        [
+          29,
+          169,
+          158
+        ]
+      ],
+      "dmcVal": [
+        [
+          "Avocado Grn Black",
+          49,
+          57,
+          25
+        ],
+        [
+          "Terra Cotta Vy Dk",
+          134,
+          48,
+          34
+        ],
+        [
+          "Pewter Very Light",
+          209,
+          209,
+          209
+        ],
+        [
+          "Desert Sand Vy Dk",
+          160,
+          108,
+          80
+        ],
+        [
+          "Cocoa Light",
+          166,
+          136,
+          129
+        ],
+        [
+          "Beaver Gray Dk",
+          135,
+          125,
+          115
+        ],
+        [
+          "Beige Brown Lt",
+          182,
+          155,
+          126
+        ],
+        [
+          "Beaver Gray Med",
+          176,
+          166,
+          156
+        ],
+        [
+          "Beaver Gray Med",
+          176,
+          166,
+          156
+        ],
+        [
+          "Turquoise Bright Dark",
+          18,
+          174,
+          186
+        ]
+      ],
+      "timestamp": 1636318433409,
+      "id": 4
     }
   ],
   "users": [
