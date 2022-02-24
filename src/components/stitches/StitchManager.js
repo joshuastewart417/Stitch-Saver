@@ -37,3 +37,15 @@ export const updateStitch = (editedStitch) => {
       body: JSON.stringify(editedStitch)
     }).then(data => data.json());
   }
+
+export const getStitchByUser = (target, userId, expandArray = []) => {
+    let queryParam = "?";
+    if(expandArray.length > 0) {
+        expandArray.forEach((elem) => {
+            queryParam += `_expand=${elem}&`;
+        });
+    }
+    queryParam += `userId=${userId}`;
+    return fetch(`http://localhost:8088/${target}/${queryParam}`)
+    .then(res => res.json())
+}
