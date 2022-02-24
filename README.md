@@ -1,5 +1,7 @@
 # Stitch Saver
 
+![alt text](https://res.cloudinary.com/dcxvvavft/image/upload/v1645729817/Stitch_Home_ataiii.png)
+
 What is Stitch Saver?
 
 Stitch Saver allows users to upload their embroidery/cross-stitch designs and uses Color-Thief, an image interpreting module, to provide a list of dominant RGB values present in the user designs. The app then provides a list of matching DMC embroidery thread from its local json database. The user can save these design and color sets as a "stitch" for later reference.
