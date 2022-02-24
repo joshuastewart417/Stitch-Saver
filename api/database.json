@@ -1,131 +1,9 @@
 {
   "stitches": [
     {
-      "id": 1,
       "userId": 1,
-      "imgUrl": "http://res.cloudinary.com/dcxvvavft/image/upload/v1636228914/xkvq9lp9hhskl9stwc54.jpg",
-      "title": "Bee Design ",
-      "rgbVal": [
-        [
-          230,
-          229,
-          225
-        ],
-        [
-          52,
-          52,
-          44
-        ],
-        [
-          179,
-          168,
-          134
-        ],
-        [
-          178,
-          148,
-          79
-        ],
-        [
-          147,
-          97,
-          62
-        ],
-        [
-          206,
-          198,
-          177
-        ],
-        [
-          153,
-          176,
-          174
-        ],
-        [
-          188,
-          206,
-          201
-        ],
-        [
-          105,
-          157,
-          142
-        ],
-        [
-          201,
-          162,
-          166
-        ]
-      ],
-      "dmcVal": [
-        [
-          "Beaver Gray Vy Lt",
-          230,
-          232,
-          232
-        ],
-        [
-          "Avocado Grn Black",
-          49,
-          57,
-          25
-        ],
-        [
-          "Mocha Brown Med",
-          179,
-          159,
-          139
-        ],
-        [
-          "Golden Olive Md",
-          170,
-          143,
-          86
-        ],
-        [
-          "Brown Light",
-          152,
-          94,
-          51
-        ],
-        [
-          "Fern Green Vy Lt",
-          196,
-          205,
-          172
-        ],
-        [
-          "Gray Green Med",
-          152,
-          174,
-          174
-        ],
-        [
-          "Gray Green Light",
-          189,
-          203,
-          203
-        ],
-        [
-          "Celadon Green",
-          101,
-          165,
-          125
-        ],
-        [
-          "Antique Violet Light",
-          183,
-          157,
-          167
-        ]
-      ],
-      "timestamp": 1636229201727
-    },
-    {
-      "id": 2,
-      "userId": 1,
-      "imgUrl": "http://res.cloudinary.com/dcxvvavft/image/upload/v1636229117/m87icjrdw0arjynsriar.jpg",
-      "title": "Feather Stitch Design",
+      "title": "Feather Design",
+      "imgUrl": "https://res.cloudinary.com/dcxvvavft/image/upload/v1645728835/feathers_wo5awk.jpg",
       "rgbVal": [
         [
           175,
@@ -240,12 +118,14 @@
           14
         ]
       ],
-      "timestamp": 1636232392404
+      "timestamp": 1636468695357,
+      "id": 1
     },
     {
+      "id": 3,
       "userId": 1,
-      "title": "Flower Hedgehog",
-      "imgUrl": "http://res.cloudinary.com/dcxvvavft/image/upload/v1636318395/yjeicv74crj6g4fkpmuf.jpg",
+      "imgUrl": "https://res.cloudinary.com/dcxvvavft/image/upload/v1645728901/hedgehog_wbsk9e.jpg",
+      "title": "Hedgehog Design",
       "rgbVal": [
         [
           37,
@@ -360,129 +240,7 @@
           186
         ]
       ],
-      "timestamp": 1636318433409,
-      "id": 4
-    },
-    {
-      "id": 5,
-      "userId": 1,
-      "imgUrl": "http://res.cloudinary.com/dcxvvavft/image/upload/v1636389941/b4mhite7bvvm5a24e8ff.jpg",
-      "title": "Peacock Flaunting It",
-      "rgbVal": [
-        [
-          33,
-          220,
-          138
-        ],
-        [
-          212,
-          170,
-          62
-        ],
-        [
-          18,
-          42,
-          47
-        ],
-        [
-          31,
-          102,
-          215
-        ],
-        [
-          45,
-          146,
-          87
-        ],
-        [
-          196,
-          58,
-          86
-        ],
-        [
-          120,
-          62,
-          37
-        ],
-        [
-          18,
-          58,
-          131
-        ],
-        [
-          243,
-          103,
-          184
-        ],
-        [
-          26,
-          105,
-          69
-        ]
-      ],
-      "dmcVal": [
-        [
-          "Sea Green Dark",
-          62,
-          182,
-          161
-        ],
-        [
-          "Old Gold Medium",
-          208,
-          165,
-          62
-        ],
-        [
-          "Pistachio Grn Ult V D",
-          23,
-          73,
-          35
-        ],
-        [
-          "Electric Blue Dark",
-          38,
-          150,
-          182
-        ],
-        [
-          "Jade Green",
-          51,
-          131,
-          98
-        ],
-        [
-          "Dusty Rose Ultra Dark",
-          188,
-          67,
-          101
-        ],
-        [
-          "Brown Med",
-          122,
-          69,
-          31
-        ],
-        [
-          "Royal Blue",
-          19,
-          71,
-          125
-        ],
-        [
-          "Cyclamen Pink Light",
-          255,
-          140,
-          174
-        ],
-        [
-          "Emerald Green Vy Dk",
-          21,
-          111,
-          73
-        ]
-      ],
-      "timestamp": 1636390044225
+      "timestamp": 1636479574191
     }
   ],
   "users": [
