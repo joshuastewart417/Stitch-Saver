@@ -22,3 +22,14 @@ After logging in, you will be presented with an option to upload an image/design
 When you have clicked 'load design' and your image appears on the screen you then have the option to 'create color palette.' Upon clicking this button a palette of RGB values will appear in a list below the image. You will then be prompted to 'create thread list,' this provides a list of DMC embroidery threads that closely match your color palette for your design. Once you are satisfied with the image and color list provided you can then name your "stitch" and save your design with the 'save stitch' button.
 
 Once you have saved your stitch, the app will send you to the 'stitch list' page which has a list of all your saved projects. From here you are free to delete/edit your stitch and update your stitch list accordingly.
+
+## "Create Your Stitch"
+![alt text](https://res.cloudinary.com/dcxvvavft/image/upload/v1646946187/Create_Stitch_ffwpea.png)
+
+## "Find Matching Threads"
+![alt text](https://res.cloudinary.com/dcxvvavft/image/upload/v1646946175/Stitch_Thread_nspztf.png)
+
+## "Manage Previous Designs"
+![alt text](https://res.cloudinary.com/dcxvvavft/image/upload/v1646946125/Stitch_List_pwxoy3.png)
+
+
